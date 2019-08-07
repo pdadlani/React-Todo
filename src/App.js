@@ -23,7 +23,6 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      name: 'Pri',
       todos: todoData
     }
   }
@@ -36,9 +35,9 @@ class App extends React.Component {
             ...todo,
             completed: !todo.completed
           };
-        } else {
-          return todo;
         }
+        return todo;
+        
       })
     });
   };
@@ -54,8 +53,9 @@ class App extends React.Component {
     });
   };
 
-  clearCompleted = () => {
-    console.log('clear completed has been invoked')
+  clearCompleted = (event) => {
+    // console.log('clear completed has been invoked')
+    event.preventDefault();
     this.setState({
       todos: this.state.todos.filter(todo => !todo.completed)
     });
