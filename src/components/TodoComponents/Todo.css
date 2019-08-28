@@ -1,0 +1,20 @@
+h2 {
+  background-color: grey;
+  color: white;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 10px;
+}
+
+.todo {
+  background-color: greenyellow;
+  padding: 5px;
+  border: 1px solid darkgreen;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.todo.completed {
+  text-decoration: line-through;
+  border: none;
+}
